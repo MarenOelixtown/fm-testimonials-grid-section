@@ -34,6 +34,7 @@ html {
   --light-gray: hsl(0, 0%, 81%);
   --bg-grayish-blue: hsl(210, 46%, 95%);
   --white: hsl(0, 0%, 100%);
+  --padding-item: 2rem;
 }
 body {
   font-family: "Barlow Semi Condensed", sans-serif;
@@ -56,10 +57,39 @@ main {
 }
 .testimonials {
   width: 85vw;
-  margin: 3rem auto;
+  margin: 5rem 0;
 }
 .testimonials__grid {
   display: grid;
   gap: 2rem;
   list-style: none;
+}
+
+/* Used flexbox to put the item-content 
+in logical order for screenreaders. 
+Users should first read headline, text and in the end the image*/
+.testimonials__item {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: var(--padding-item);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.quotation {
+  position: absolute;
+  top: 0;
+  right: var(--padding-item);
+}
+.testimonials__profil {
+  order: -1;
+}
+.testimonials__profil-name {
+  display: inline-block;
+}
+.testimonials__profil-img {
+  border-radius: 50%;
+}
+.testimonials__profil-name-status {
+  display: block;
 }
