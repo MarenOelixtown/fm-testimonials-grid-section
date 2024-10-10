@@ -79,6 +79,7 @@ using flexbox to creat logical order*/
   display: flex;
   flex-direction: column;
   position: relative;
+  justify-content: space-between;
 }
 .testimonials__item:nth-child(1) {
   background-color: var(--violet);
@@ -130,4 +131,41 @@ using flexbox to creat logical order*/
   font-size: 0.813rem;
   line-height: 1.5;
   opacity: 70%;
+}
+
+@media (max-width: 22.5em) {
+  .quotation {
+    display: none;
+  }
+}
+@media (min-width: 75em) {
+  .testimonials {
+    max-width: 60vw;
+  }
+  .testimonials__grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr;
+    row-gap: 1.5rem;
+  }
+  .testimonials__item:nth-child(1) {
+    grid-column-end: span 2;
+  }
+  .testimonials__item:nth-child(2) {
+    grid-column-start: 3;
+  }
+  .testimonials__item:nth-child(3) {
+    grid-row-start: 2;
+  }
+  .testimonials__item:nth-child(4) {
+    grid-column-start: 2;
+    grid-column-end: span 2;
+  }
+  .testimonials__item:nth-child(5) {
+    grid-row-start: 1;
+    grid-column-start: 4;
+    grid-row-end: span 2;
+  }
+  .quotation {
+    right: 5rem;
+  }
 }
