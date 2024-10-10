@@ -9,7 +9,7 @@
   white-space: nowrap;
 }
 .testimonials {
-  width: 85vw;
+  width: 80vw;
   margin: 5rem 0;
 }
 .testimonials__grid {
@@ -85,13 +85,10 @@
 
 @media (max-width: 22.5em) {
   .quotation-img {
-    display: none;
+    height: 70px;
   }
 }
 @media (min-width: 75em) {
-  .testimonials {
-    max-width: 60vw;
-  }
   .testimonials__grid {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr 1fr;
