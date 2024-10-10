@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Testimonials grid section / Vercel deployment](https://your-live-site-url.com)
+- Live Site URL: [Testimonials grid section / Vercel deployment](https://fm-testimonials-grid-section-brown.vercel.app/)
 
 ## My process
 
