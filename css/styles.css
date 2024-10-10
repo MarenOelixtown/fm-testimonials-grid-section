@@ -34,11 +34,11 @@ html {
   --light-gray: hsl(0, 0%, 81%);
   --bg-grayish-blue: hsl(210, 46%, 95%);
   --white: hsl(0, 0%, 100%);
-  --padding-item: 2rem;
 }
 body {
   font-family: "Barlow Semi Condensed", sans-serif;
-  color: var(--font-grayish-blue);
+  font-weight: 500;
+  color: var(--white);
 }
 main {
   background-color: var(--bg-grayish-blue);
@@ -64,32 +64,70 @@ main {
   gap: 2rem;
   list-style: none;
 }
+.quotation {
+  position: absolute;
+  top: 0;
+  right: 1.3rem;
+  height: 115px;
+}
 
-/* Used flexbox to put the item-content 
-in logical order for screenreaders. 
-Users should first read headline, text and in the end the image*/
+/* headline first for screenreader-users, 
+using flexbox to creat logical order*/
 .testimonials__item {
-  border: 1px solid black;
   border-radius: 10px;
-  padding: var(--padding-item);
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   position: relative;
 }
-.quotation {
-  position: absolute;
-  top: 0;
-  right: var(--padding-item);
+.testimonials__item:nth-child(1) {
+  background-color: var(--violet);
 }
+.testimonials__item:nth-child(1) .testimonials__profil-img {
+  --border-color: rgba(255, 255, 255, 0.5);
+}
+.testimonials__item:nth-child(2) {
+  background-color: var(--font-grayish-blue);
+}
+.testimonials__item:nth-child(3),
+.testimonials__item:nth-child(5) {
+  background-color: var(--white);
+  color: var(--bg-blackish-blue);
+}
+.testimonials__item:nth-child(4) {
+  background-color: var(--bg-blackish-blue);
+}
+.testimonials__item:nth-child(4) .testimonials__profil-img {
+  --border-color: var(--violet);
+}
+
 .testimonials__profil {
   order: -1;
+  display: flex;
+  align-items: center;
+}
+.testimonials__profil-img {
+  border: 2px solid var(--border-color);
+  border-radius: 50%;
+  width: 4ch;
 }
 .testimonials__profil-name {
   display: inline-block;
-}
-.testimonials__profil-img {
-  border-radius: 50%;
+  /* font-weight: 600; */
+  margin-left: 2ch;
 }
 .testimonials__profil-name-status {
   display: block;
+  font-size: 0.813rem;
+  opacity: 50%;
+}
+.testimonials__item-title {
+  font-size: 1.36rem;
+  margin: 1rem 0;
+  z-index: 1;
+}
+.testimonials__item-quote {
+  font-size: 0.813rem;
+  line-height: 1.5;
+  opacity: 70%;
 }
