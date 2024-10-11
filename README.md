@@ -45,6 +45,8 @@ Users should be able to:
 
 I have not only initialised CSS custom properties in :root but also within class-selectors to style individual border-colors for images.
 
+After I figured out a better solution for HTML-structure with blockquote I refactored the code.
+
 ### Continued development
 
 I want to utilise the power of CSS custom properties more in the future and find out when it makes sense to use them but at the same time not to overdo it.

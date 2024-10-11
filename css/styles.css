@@ -8,14 +8,12 @@
   clip-path: inset(50%);
   white-space: nowrap;
 }
-.testimonials {
-  width: 80vw;
-  margin: 5rem 0;
-}
+
 .testimonials__grid {
+  max-width: 80vw;
+  margin: 5rem 0;
   display: grid;
   gap: 2rem;
-  list-style: none;
 }
 .quotation-img {
   position: absolute;
@@ -26,10 +24,10 @@
 .testimonials__item {
   border-radius: 10px;
   padding: 2rem;
-  display: flex; /* headline first in html for screenreader-users, using flexbox to creat logical order in css*/
-  flex-direction: column;
   position: relative;
-  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 .testimonials__item:nth-child(1) {
   background-color: var(--violet);
@@ -44,6 +42,7 @@
 .testimonials__item:nth-child(5) {
   background-color: var(--white);
   color: var(--dark-grayish-blue);
+  font-weight: 600;
   box-shadow: 32px 34px 82px -26px rgba(72, 85, 106, 0.28);
 }
 .testimonials__item:nth-child(4) {
@@ -54,30 +53,29 @@
   --border-color: var(--violet);
 }
 
-.testimonials__profil {
-  order: -1; /* headline first in html for screenreader-users, using flexbox to creat logical order in css*/
-  display: flex;
-  align-items: center;
-}
 .testimonials__profil-img {
   border: 2px solid var(--border-color);
   border-radius: 50%;
   width: 4ch;
 }
 .testimonials__profil-name {
+  font-size: 0.95rem;
   display: inline-block;
   margin-left: 2ch;
-  z-index: 1;
 }
 .testimonials__profil-name-status {
-  display: block;
   font-size: 0.813rem;
+  display: block;
   opacity: 50%;
+}
+.testimonials__item-title,
+.testimonials__profil {
+  position: relative;
+  z-index: 1;
 }
 .testimonials__item-title {
   font-size: 1.36rem;
   margin: 1rem 0;
-  z-index: 1;
 }
 .testimonials__item-quote {
   font-size: 0.813rem;
@@ -85,11 +83,6 @@
   opacity: 70%;
 }
 
-@media (max-width: 22.5em) {
-  .quotation-img {
-    height: 70px;
-  }
-}
 @media (min-width: 37.5em) {
   .testimonials__grid {
     grid-template-columns: 1fr 1fr;
@@ -102,7 +95,7 @@
 @media (min-width: 75em) {
   .testimonials__grid {
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: auto auto;
     row-gap: 1.5rem;
   }
   .testimonials__item:nth-child(1) {
