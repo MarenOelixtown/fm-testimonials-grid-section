@@ -20,7 +20,6 @@
   top: 0;
   right: 1.3rem;
   height: 115px;
-  z-index: ;
 }
 .testimonials__item {
   border-radius: 10px;
@@ -43,6 +42,7 @@
 .testimonials__item:nth-child(5) {
   background-color: var(--white);
   color: var(--dark-grayish-blue);
+  font-weight: 600;
   box-shadow: 32px 34px 82px -26px rgba(72, 85, 106, 0.28);
 }
 .testimonials__item:nth-child(4) {
