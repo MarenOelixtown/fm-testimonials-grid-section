@@ -67,6 +67,7 @@
 .testimonials__profil-name {
   display: inline-block;
   margin-left: 2ch;
+  z-index: 1;
 }
 .testimonials__profil-name-status {
   display: block;
@@ -89,6 +90,15 @@
     height: 70px;
   }
 }
+@media (min-width: 37.5em) {
+  .testimonials__grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, auto);
+  }
+  .testimonials__item:nth-child(1) {
+    grid-row-end: span 2;
+  }
+}
 @media (min-width: 75em) {
   .testimonials__grid {
     grid-template-columns: repeat(4, 1fr);
@@ -97,6 +107,7 @@
   }
   .testimonials__item:nth-child(1) {
     grid-column-end: span 2;
+    grid-row-end: span 1;
   }
   .testimonials__item:nth-child(2) {
     grid-column-start: 3;
